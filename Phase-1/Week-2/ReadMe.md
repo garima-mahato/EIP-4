@@ -147,3 +147,24 @@ Epoch 00020: LearningRateScheduler setting learning rate to 0.000424869.
 ### 2) Result of model.evaluate(on test data)
 
 [0.02007201824320946, 0.9943]
+
+
+----------
+
+### 3) Strategy taken
+
+1) Since MNIST is image dataset, I used a CNN model having 3 convolutional layers of 16, 32, 64 kernels each involving 3 x 3 convolutions. This gave an accuracy of 96.6%.
+
+2) **Increasing number of kernels** : On further improving the model by increasing number of kernels in each of the previous layers to 32-64-128, the accuracy improved to  97.14% but the number of parameters increased.
+
+3) **Increasing number of layers** : On further improving the model by increasing number of layers from 3 to 4 each with 32-64-128-256, the accuracy improved to 98.82% but the number of parameters increased.
+
+4) Adding a convolution block of 16-32 contributes to approx 5k parameters. Thus, adding 3 such blocks with 1x1 convolutions in between contributed to 19k paraemters with an accuracy of 96.5%.
+
+5) Adding maxpooling layer would improve the receptive field and hence improves the accuracy. For adding maxpooling, number of convolution blocks will have to be reduced from 3 to 2.
+
+6) Maxpooling should not be added just before the last layer. The resulting CNN model has an accuracy score of [0.04112879056819947, 0.986]
+
+7) To improve the accuracy, we can add more layers. Since more blocks cannot be added, I added 1 3x3 convolution layer in the last block with 32 kernels. This crossed the 15k mark of number of parameters. So I changed both the 2nd last convolution layers' number of filters from 32 to 16. This still exceeded. So, I changed the last layers' number of kernels to 16. This had 12,336 parameters with validation score of [0.03090761237440747, 0.9909].
+
+8) Going through the logs shows decrease in validation accuracy as compared to training accuracy. This seems to be a little overfit. So, added Batch Normalization and dropout after each 3x3 convolution. This gave an accuracy score of [0.021835740570277266, 0.9927].
