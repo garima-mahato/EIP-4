@@ -129,6 +129,10 @@ model.add(Activation('softmax'))
 
 # 3) 50 epoch logs
 
+##### The best validation accuracy is 85.08 at 48 epoch.
+
+##### The model's test accuracy is 84.10 .
+
 Epoch 1/50
 
 390/390 [==============================] - 46s 117ms/step - loss: 1.6997 - acc: 0.3726 - val_loss: 1.4334 - val_acc: 0.5010
