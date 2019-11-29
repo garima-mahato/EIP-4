@@ -1,4 +1,9 @@
-# 1) Final Validation accuracy for Base Network: 83.29
+# 1) Final Validation accuracy for:
+
+## Base Network(Given Network): 83.29
+
+## Base Network(Modified Network by me): 84.10
+
 
 ----
 
@@ -129,9 +134,9 @@ model.add(Activation('softmax'))
 
 # 3) 50 epoch logs
 
-##### The best validation accuracy is 85.08 at 48 epoch.
+# The best validation accuracy is 85.08 at 48 epoch.
 
-##### The model's test accuracy is 84.10 .
+# The modified model's test accuracy is 84.10 .
 
 Epoch 1/50
 
