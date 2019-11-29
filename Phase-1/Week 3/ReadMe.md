@@ -134,9 +134,9 @@ model.add(Activation('softmax'))
 
 # 3) 50 epoch logs
 
-### The best validation accuracy is 85.08 at 48 epoch.
+### The best validation accuracy of the above modified network is 85.08 at 48 epoch.
 
-### The modified model's test accuracy is 84.10 .
+### The above modified model's test accuracy is 84.10 .
 
 Epoch 1/50
 
