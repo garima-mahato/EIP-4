@@ -25,7 +25,7 @@ model.add(Dropout(0.2))
 
 
 
-### Layer 2 **
+### Layer 2 
 
 #### Output size - (32,32,48)
 
